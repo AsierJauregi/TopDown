@@ -1,0 +1,25 @@
+{
+  "quests": [
+    {
+      "questName": "Hablar con X",
+      "description": "Encuentra a X en el pueblo y habla con él para obtener información sobre tu misión.",
+      "questTasks": [
+        {
+          "description": "Ve al pueblo"
+        },
+        {
+          "description": "Habla con X"
+        }
+      ]
+    },
+    {
+      "questName": "Explorar B",
+      "description": "Explora B cerca del pueblo.",
+      "questTasks": [
+        {
+          "description": "Ve a B"
+        }
+      ]
+    }
+  ]
+}
