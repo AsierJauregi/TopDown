@@ -3,15 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hierba
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Colisiones
   - Water
   - UI
-  - 
+  - Puertas
   - 
   - 
   - 
