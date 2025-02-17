@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [SerializeField] private GameManagerSO gameManagerSO;
     private float inputH;
     private float inputV;
     private bool moviendo;
@@ -13,15 +13,20 @@ public class Player : MonoBehaviour
     private Vector3 puntoInteraccion;
     private Vector3 ultimoInput;
     private Collider2D colliderDelante;
+    private Animator anim;
 
     [SerializeField] private float velocidadMovimiento;
     [SerializeField] private float radioInteraccion;
     [SerializeField] private LayerMask queEsColisionable;
 
+    public Vector3 PuntoDestino { get => puntoDestino; set => puntoDestino = value; }
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        transform.position = gameManagerSO.NewPosition;
+        anim.SetFloat("InputH", gameManagerSO.NewOrientation.x);
+        anim.SetFloat("InputV", gameManagerSO.NewOrientation.y);
     }
 
     // Update is called once per frame
@@ -31,6 +36,10 @@ public class Player : MonoBehaviour
 
         if (!moviendo && (inputH != 0 || inputV != 0))
         {
+            anim.SetBool("IsMoving", true);
+            anim.SetFloat("InputH", inputH);
+            anim.SetFloat("InputV", inputV);
+
             ultimoInput = new Vector3(inputH, inputV, 0);
             puntoDestino = transform.position + ultimoInput;
             puntoInteraccion = puntoDestino;
@@ -41,7 +50,10 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(Mover());
             }
-
+        }
+        else if (inputV == 0 && inputH == 0)
+        {
+            anim.SetBool("IsMoving", false);
         }
     }
 

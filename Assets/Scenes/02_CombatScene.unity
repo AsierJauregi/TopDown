@@ -3974,7 +3974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCombatState: 1
-  gM: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gM: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   combatEnemies:
   - {fileID: 11400000, guid: 18fcc0344ff8557409dd775f093a9b41, type: 2}
   - {fileID: 11400000, guid: e95c1cfca1b2f1549ae83b24acba305a, type: 2}

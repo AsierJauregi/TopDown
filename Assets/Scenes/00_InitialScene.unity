@@ -22467,7 +22467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: -2.5, y: 8.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -22687,7 +22687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: 17.5, y: 26.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -22956,7 +22956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: -11.5, y: 8.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -23139,10 +23139,10 @@ GameObject:
   m_Component:
   - component: {fileID: 750400532}
   - component: {fileID: 750400531}
-  - component: {fileID: 750400530}
   - component: {fileID: 750400529}
   - component: {fileID: 750400528}
   - component: {fileID: 750400527}
+  - component: {fileID: 750400533}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -23243,24 +23243,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &750400530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750400526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df45525e50ea454448bcb27c763035fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
-  velocidadMovimiento: 5
-  radioInteraccion: 0.3
-  queEsColisionable:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!212 &750400531
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23328,6 +23310,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750400533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750400526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb46caa253e3fcc4da052cd204505b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
+  velocidadMovimiento: 5
+  radioInteraccion: 0.3
+  queEsColisionable:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &750732921
 GameObject:
   m_ObjectHideFlags: 0
@@ -41260,7 +41260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: 18.5, y: 8.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -41480,7 +41480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: -17.5, y: 18.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -41700,7 +41700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: -29.5, y: 8.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
@@ -41920,7 +41920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d986ffd614657341985be08b051755d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManager: {fileID: 0}
   player: {fileID: 750400526}
   nextSceneIndex: 2
 --- !u!19719996 &1129036490
@@ -43688,7 +43688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bf76e8f95d65340b179f4315a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerSO: {fileID: 11400000, guid: a5d423de8626926458372c16803b364d, type: 2}
+  gameManagerSO: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
   nextSceneIndex: 1
   nextScenePosition: {x: -0.5, y: 26.5, z: 0}
   nextSceneOrientation: {x: 0, y: 1}
