@@ -4,15 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NPC
+  - Hierba
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Colisiones
   - Water
   - UI
-  - Collisiones
+  - Puertas
   - 
   - 
   - 
