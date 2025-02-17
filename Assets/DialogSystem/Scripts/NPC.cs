@@ -5,24 +5,50 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, Interactuable
 {
+    [Header("Dialogo")]
     [SerializeField, TextArea(1,5)] private string[] frases; //num min de lineas y num máximo el text area (1,5)
     [SerializeField] private float tiempoEntreLetras;
     [SerializeField] private GameObject cuadroDialogo;
     [SerializeField] private TextMeshProUGUI textoDialogo;
 
+
+    [Header("Opciones")]
+    [SerializeField] private bool usarOpciones;
+    [SerializeField] private GameObject cuadroOpciones;
+    [SerializeField] private GameObject[] botonesOpciones;
+    [SerializeField,TextArea(1, 5)] private string[] opciones;
+    private bool opcionesMostradas = false;
+    private bool terminarConversacion = false;
+
+    [Header("Otros")]
     [SerializeField] private GameManagerSO gameManager;
+    private bool patrullaNPCEncontrada = false;
     private bool hablandoNPC = false;
     private int indiceActual = -1;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Start()
     {
-        
+        Patrulla_NPC patrullaNPC;
+        if(this.gameObject.TryGetComponent<Patrulla_NPC>(out patrullaNPC)){
+            patrullaNPCEncontrada = true;
+        }
     }
 
     public void Interactuar()
     {
+        if (patrullaNPCEncontrada)
+        {
+            this.gameObject.GetComponent<Patrulla_NPC>().NoEstaHablando = false;
+            this.gameObject.GetComponent<Patrulla_NPC>().YaHaHablado = true;
+        }
         gameManager.CambiarEstadoPlayer(false);
         cuadroDialogo.SetActive(true);
+        if(opcionesMostradas && !terminarConversacion)
+        {
+            indiceActual = frases.Length - 1;
+          //  Debug.Log("Salto dialogo");
+        }
         if (!hablandoNPC)
         {
             SiguienteFrase();
@@ -46,6 +72,10 @@ public class NPC : MonoBehaviour, Interactuable
             yield return new WaitForSeconds(tiempoEntreLetras);
         }
         hablandoNPC=false;
+        if (usarOpciones && !opcionesMostradas)
+        {
+            MostrarOpciones();
+        }
     }
 
 
@@ -54,7 +84,15 @@ public class NPC : MonoBehaviour, Interactuable
         StopAllCoroutines();
         textoDialogo.text = frases[indiceActual];
         hablandoNPC = false;
-
+        if (usarOpciones && !opcionesMostradas)
+        {
+            MostrarOpciones();
+        }
+        if (terminarConversacion)
+        {
+            indiceActual = frases.Length - 1;
+        }
+        
     }
 
     private void SiguienteFrase()
@@ -79,5 +117,46 @@ public class NPC : MonoBehaviour, Interactuable
         indiceActual = -1;
         cuadroDialogo.SetActive(false);
         gameManager.CambiarEstadoPlayer(true);
+        if (patrullaNPCEncontrada)
+        {
+            this.gameObject.GetComponent<Patrulla_NPC>().NoEstaHablando = true;
+        }
+        if (usarOpciones)
+        {
+            cuadroOpciones.SetActive(false);
+        }
+        opcionesMostradas = false;
     }
+    private void MostrarOpciones()
+    {
+        cuadroOpciones.SetActive(true);
+        opcionesMostradas = true; 
+
+        // Configurar los botones con las opciones disponibles
+        for (int i = 0; i < botonesOpciones.Length; i++)
+        {
+            if (i < opciones.Length)
+            {
+                botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+                int index = i;
+                botonesOpciones[i].GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => SeleccionarOpcion(index));
+            }
+
+        }
+    }
+    public void SeleccionarOpcion(int index)
+    {
+        terminarConversacion = true;
+        cuadroOpciones.SetActive(false);
+        indiceActual = index + 1;
+        CompletarFrase();
+    }
+
+
+
+
 }
+
+
+
+

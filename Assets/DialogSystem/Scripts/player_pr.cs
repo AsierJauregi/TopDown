@@ -55,7 +55,6 @@ public class player_pr : MonoBehaviour
 
     private void LanzarInteraccion()
     {
-        Debug.Log("wennas");
         colliderDelante = LanzarCheck();
         if (colliderDelante)
         {

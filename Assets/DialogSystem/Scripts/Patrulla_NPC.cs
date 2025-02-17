@@ -16,6 +16,15 @@ public class Patrulla_NPC : MonoBehaviour
     private Vector3 posicionObjetivo;
     private Vector3 posicionInicial;
 
+    private bool noEstaHablando = true;
+
+    public bool NoEstaHablando { get => noEstaHablando; set => noEstaHablando = value; }
+    public bool YaHaHablado { get => yaHaHablado; set => yaHaHablado = value; }
+
+    private bool yaHaHablado = false;
+
+    private bool vaAndar = true;
+
     private void Awake()
     {
         posicionInicial = transform.position;
@@ -30,13 +39,17 @@ public class Patrulla_NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (noEstaHablando && yaHaHablado && vaAndar)
+        {
+            vaAndar = false;
+            StartCoroutine(IrHaciaDestinoYEsperar());
+        }
     }
 
 
     private IEnumerator IrHaciaDestinoYEsperar()
     {
-        while (true) //Por siempre.
+        while (noEstaHablando) //Por siempre.
         {
             CalcularNuevoDestino();
             while (transform.position != posicionObjetivo) //Va al ritmo de los frames pero corta bajo la condicion establecida
@@ -46,6 +59,7 @@ public class Patrulla_NPC : MonoBehaviour
             }
             yield return new WaitForSeconds(Random.Range(tiempoEntreEsperasMinimo, tiempoEntreEsperasMaximo));
         }
+        vaAndar = true;
     }
 
     private void CalcularNuevoDestino()
