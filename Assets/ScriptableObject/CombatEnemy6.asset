@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c90cc7763e93eb4885afa13c06953fd, type: 3}
+  m_Name: CombatEnemy6
+  m_EditorClassIdentifier: 
+  nameEnemy: Skull
+  sprite: {fileID: -936074298, guid: 21479ec6c54ee9e47b087cb6746bbbbc, type: 3}
+  health: 70
+  mana: 50
+  aditionalDamage: 10
