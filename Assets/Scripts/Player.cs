@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float radioInteraccion;
     [SerializeField] private LayerMask queEsColisionable;
 
+    public bool interactuando;
     public Vector3 PuntoDestino { get => puntoDestino; set => puntoDestino = value; }
     // Start is called before the first frame update
     void Start()
@@ -67,10 +68,11 @@ public class Player : MonoBehaviour
 
     private void LanzarInteraccion()
     {
+
         colliderDelante = LanzarCheck();
         if (colliderDelante)
         {
-            if(colliderDelante.TryGetComponent(out Interactuable interactuable))
+            if (colliderDelante.TryGetComponent(out Interactuable interactuable))
             {
                 interactuable.Interactuar();
             }

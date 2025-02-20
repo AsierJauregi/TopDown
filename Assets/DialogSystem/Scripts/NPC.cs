@@ -42,7 +42,7 @@ public class NPC : MonoBehaviour, Interactuable
             this.gameObject.GetComponent<Patrulla_NPC>().NoEstaHablando = false;
             this.gameObject.GetComponent<Patrulla_NPC>().YaHaHablado = true;
         }
-        gameManager.CambiarEstadoPlayer(false);
+    //    gameManager.CambiarEstadoPlayer(false);
         cuadroDialogo.SetActive(true);
         if(opcionesMostradas && !terminarConversacion)
         {
@@ -116,7 +116,7 @@ public class NPC : MonoBehaviour, Interactuable
         textoDialogo.text = "";
         indiceActual = -1;
         cuadroDialogo.SetActive(false);
-        gameManager.CambiarEstadoPlayer(true);
+    //    gameManager.CambiarEstadoPlayer(true);
         if (patrullaNPCEncontrada)
         {
             this.gameObject.GetComponent<Patrulla_NPC>().NoEstaHablando = true;
@@ -137,6 +137,7 @@ public class NPC : MonoBehaviour, Interactuable
         {
             if (i < opciones.Length)
             {
+               // Debug.Log("MUESTRATEEE");
                 botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
                 int index = i;
                 botonesOpciones[i].GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => SeleccionarOpcion(index));

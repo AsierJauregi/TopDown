@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3107052006757259160}
   - component: {fileID: 7736920113331793694}
   - component: {fileID: 4200469603013509791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kid
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MonoBehaviour:
   tiempoEntreLetras: 0.03
   cuadroDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
+  usarOpciones: 1
   cuadroOpciones: {fileID: 0}
   botonesOpciones:
   - {fileID: 0}
@@ -62,7 +63,6 @@ MonoBehaviour:
   opciones:
   - puede
   - 'no c:'
-  usarOpciones: 1
   gameManager: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
 --- !u!212 &8286667724474555440
 SpriteRenderer:
