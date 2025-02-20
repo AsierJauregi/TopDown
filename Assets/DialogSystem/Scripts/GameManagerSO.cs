@@ -17,7 +17,8 @@ public class GameManagerSO:ScriptableObject
     public Vector2 NewOrientation { get => newOrientation; set => newOrientation = value; }
     public Vector3 NewPosition { get => newPosition; set => newPosition = value; }
 
-    private Player player; 
+    private Player player;
+    private SistemaInventario inventario;
     private void OnEnable() // llamadas por EVENTO
     {
         SceneManager.sceneLoaded += NuevaEscenaCargada;
@@ -26,10 +27,12 @@ public class GameManagerSO:ScriptableObject
     private void NuevaEscenaCargada(Scene arg0, LoadSceneMode arg1)
     {
         player = FindObjectOfType<Player>();
+        inventario = FindObjectOfType<SistemaInventario>();
     }
 
     public void LoadNewScene(Vector3 newPosition, Vector2 newOrientation, int newSceneIndex)
     {
+        this.inventario = inventario.GetInstance();
         this.newPosition = newPosition;
         this.newOrientation = newOrientation;
         SceneManager.LoadScene(newSceneIndex);
