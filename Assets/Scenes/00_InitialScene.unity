@@ -22598,6 +22598,108 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &312617362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312617365}
+  - component: {fileID: 312617364}
+  - component: {fileID: 312617363}
+  m_Layer: 0
+  m_Name: ExplorationArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &312617363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312617362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac2a59e0af6a894ebd813c82f84c41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Visita el parque
+  taskDescription: Visita realizada
+--- !u!60 &312617364
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312617362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 6.1775265, y: -10.114587}
+      - {x: 6.336009, y: 6.5827055}
+      - {x: -1.9683876, y: 6.651473}
+      - {x: -1.9301407, y: 9.504051}
+      - {x: -16.662144, y: 9.578247}
+      - {x: -16.5075, y: -1.1927967}
+      - {x: -4.6228404, y: -0.83221364}
+      - {x: -4.557277, y: -7.1354}
+      - {x: 2.076344, y: -7.135402}
+      - {x: 2.1419063, y: -10.135719}
+  m_UseDelaunayMesh: 0
+--- !u!4 &312617365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312617362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.195103, y: 11.262897, z: 0.071790546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &320241275
 GameObject:
   m_ObjectHideFlags: 0
@@ -23677,7 +23779,7 @@ GameObject:
   - component: {fileID: 750400533}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23861,6 +23963,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   interactuando: 0
+  questManagerUI: {fileID: 1021237725}
 --- !u!1 &750732921
 GameObject:
   m_ObjectHideFlags: 0
@@ -42406,6 +42509,195 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1021237723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1785875997}
+    m_Modifications:
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795786447959869496, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795786447959869496, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0009460449
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976740053627041654, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Name
+      value: QuestManagerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979625556041564691, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979625556041564691, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+--- !u!224 &1021237724 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+  m_PrefabInstance: {fileID: 1021237723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021237725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3492771016300979077, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+  m_PrefabInstance: {fileID: 1021237723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd62a30891b4a2b4b9ef598e1e603e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1029909334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45199,6 +45491,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
+      propertyPath: questName
+      value: Obtener las llaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
       propertyPath: textoDialogo
       value: 
       objectReference: {fileID: 1515025888}
@@ -45212,15 +45508,15 @@ PrefabInstance:
       objectReference: {fileID: 582481175}
     - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
       propertyPath: frases.Array.data[0]
-      value: "Hola, caballero. Necesito su ayuda, \xBFme escucha?"
+      value: "Hola, caballero. Necesito su ayuda, \xBFpuedes conseguir mis llaves?"
       objectReference: {fileID: 0}
     - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
       propertyPath: frases.Array.data[1]
-      value: "Gracias, s\xE9 que alguien me escucha"
+      value: Gracias!
       objectReference: {fileID: 0}
     - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
       propertyPath: frases.Array.data[2]
-      value: "Vaya, qu\xE9 pena que no me escuches, pero al menos me contestaste..."
+      value: "Vaya, qu\xE9 pena."
       objectReference: {fileID: 0}
     - target: {fileID: 6919876007545317338, guid: 29bebb32fac3b02479785de1ac369b49, type: 3}
       propertyPath: opciones.Array.data[0]
@@ -45308,22 +45604,107 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: questName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
       propertyPath: textoDialogo
       value: 
       objectReference: {fileID: 1515025888}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: usarOpciones
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
       propertyPath: cuadroDialogo
       value: 
       objectReference: {fileID: 749250389}
     - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: questTaskName
+      value: Cuidados caninos
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
       propertyPath: cuadroOpciones
       value: 
       objectReference: {fileID: 582481175}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: taskDescription
+      value: Perro acariciado
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: opciones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: opciones.Array.data[0]
+      value: '[Acariciar]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: opciones.Array.data[1]
+      value: '[Golpear]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: botonesOpciones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: botonesOpciones.Array.data[0]
+      value: 
+      objectReference: {fileID: 40157212}
+    - target: {fileID: 9112071691644628993, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+      propertyPath: botonesOpciones.Array.data[1]
+      value: 
+      objectReference: {fileID: 1858279960}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f186343f063b5143adb6252894bb242, type: 3}
+--- !u!1 &1257241567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257241569}
+  - component: {fileID: 1257241568}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1257241568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257241567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e04ff132aa119b4988aee7cae25af94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+--- !u!4 &1257241569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257241567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.875007, y: -3.1349525, z: -0.14842822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1515025886
 GameObject:
   m_ObjectHideFlags: 0
@@ -45696,6 +46077,7 @@ RectTransform:
   m_Children:
   - {fileID: 141092605}
   - {fileID: 1086967940}
+  - {fileID: 1021237724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -46213,6 +46595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: greenKey
       objectReference: {fileID: 0}
+    - target: {fileID: 7683347320851862029, guid: e1736629959d40e43a6d01ced160a77f, type: 3}
+      propertyPath: questName
+      value: Obtener las llaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683347320851862029, guid: e1736629959d40e43a6d01ced160a77f, type: 3}
+      propertyPath: taskDescription
+      value: Llave verde obtenida
+      objectReference: {fileID: 0}
     - target: {fileID: 8854101315119877603, guid: e1736629959d40e43a6d01ced160a77f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.545604
@@ -46306,6 +46696,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5737347612043786452, guid: f31dda3980170c9468dcce095e85982d, type: 3}
+      propertyPath: questName
+      value: Obtener las llaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737347612043786452, guid: f31dda3980170c9468dcce095e85982d, type: 3}
+      propertyPath: taskDescription
+      value: Llave roja obtenida
+      objectReference: {fileID: 0}
     - target: {fileID: 6540275753296186331, guid: f31dda3980170c9468dcce095e85982d, type: 3}
       propertyPath: m_Name
       value: redKey
@@ -46363,6 +46761,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2396375860284150484, guid: cedad8a2b3d0b9b49866b71cbb402d0f, type: 3}
+      propertyPath: questName
+      value: Obtener las llaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396375860284150484, guid: cedad8a2b3d0b9b49866b71cbb402d0f, type: 3}
+      propertyPath: taskDescription
+      value: Llave amarilla obtenida
+      objectReference: {fileID: 0}
     - target: {fileID: 8073585775854326794, guid: cedad8a2b3d0b9b49866b71cbb402d0f, type: 3}
       propertyPath: m_Name
       value: yellowKey
@@ -46383,6 +46789,14 @@ PrefabInstance:
     - target: {fileID: 2310815665189564116, guid: 8a4149d79e0866b4c89fe0d1f37e5455, type: 3}
       propertyPath: m_Name
       value: blueKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617647553113216865, guid: 8a4149d79e0866b4c89fe0d1f37e5455, type: 3}
+      propertyPath: questName
+      value: Obtener las llaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617647553113216865, guid: 8a4149d79e0866b4c89fe0d1f37e5455, type: 3}
+      propertyPath: taskDescription
+      value: Llave azul obtenida
       objectReference: {fileID: 0}
     - target: {fileID: 6670492841846133569, guid: 8a4149d79e0866b4c89fe0d1f37e5455, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46462,3 +46876,5 @@ SceneRoots:
   - {fileID: 320241276}
   - {fileID: 636430502}
   - {fileID: 1029909334}
+  - {fileID: 1257241569}
+  - {fileID: 312617365}

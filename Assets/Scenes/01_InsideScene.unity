@@ -808,6 +808,105 @@ MonoBehaviour:
   nextSceneIndex: 0
   nextScenePosition: {x: -23.5, y: 1.5, z: 0}
   nextSceneOrientation: {x: 0, y: -1}
+--- !u!1 &248967612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248967615}
+  - component: {fileID: 248967614}
+  - component: {fileID: 248967613}
+  m_Layer: 0
+  m_Name: ExploreArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &248967613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac2a59e0af6a894ebd813c82f84c41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Explora la cueva norte
+  taskDescription: Entra en la cueva
+--- !u!60 &248967614
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967612}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.42520905, y: 1.7047997}
+      - {x: -2.0169935, y: 0.4662855}
+      - {x: -1.4848037, y: -1.6361369}
+      - {x: -0.5793762, y: -0.77169037}
+      - {x: 0.65768206, y: -0.8148401}
+      - {x: 1.4668827, y: -1.6612511}
+      - {x: 2.06359, y: 0.36726373}
+  m_UseDelaunayMesh: 0
+--- !u!4 &248967615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.57, y: 28.6, z: -0.059202522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &343179444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1246,6 +1345,207 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8804522775232092121, guid: 8850d47f72480374c93ae8230ed720ee, type: 3}
   m_PrefabInstance: {fileID: 421119942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &422902812
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 947009563}
+    m_Modifications:
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540992357762779835, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795786447959869496, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795786447959869496, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0009460449
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 255.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976740053627041654, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_Name
+      value: QuestManagerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350088794051534155, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025450376125087771, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979625556041564691, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979625556041564691, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+--- !u!224 &422902813 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3832425433500871360, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+  m_PrefabInstance: {fileID: 422902812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &422902814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3492771016300979077, guid: 0c228ffefd6eeca4eb27125f5a929763, type: 3}
+  m_PrefabInstance: {fileID: 422902812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd62a30891b4a2b4b9ef598e1e603e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &461159720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1255,6 +1555,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 479848361}
     m_Modifications:
     - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: questName
+      value: Visita el parque
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
@@ -1263,6 +1567,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 763134374}
     - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: usarOpciones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
       propertyPath: cuadroDialogo
       value: 
       objectReference: {fileID: 357316196}
@@ -1270,6 +1578,46 @@ PrefabInstance:
       propertyPath: cuadroOpciones
       value: 
       objectReference: {fileID: 82293679}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: frases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: opciones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: frases.Array.data[0]
+      value: "zzzzzz... zzzzz... zzzzz... \xBFQu\xE9 habr\xE1 en el parque?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: frases.Array.data[1]
+      value: zzzzzz... zzzzz... zzzzz...
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: frases.Array.data[2]
+      value: zzzzzz... zzzzz... zzzzz...
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: opciones.Array.data[0]
+      value: "Ir\xE9 a ver"
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: opciones.Array.data[1]
+      value: No
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: botonesOpciones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: botonesOpciones.Array.data[0]
+      value: 
+      objectReference: {fileID: 499865113}
+    - target: {fileID: 621586422971154271, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
+      propertyPath: botonesOpciones.Array.data[1]
+      value: 
+      objectReference: {fileID: 1218319061}
     - target: {fileID: 3076477690424091414, guid: 00897a32e7526c346b42a0c6b57a708e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -2427,6 +2775,7 @@ RectTransform:
   m_Children:
   - {fileID: 1383125323}
   - {fileID: 98311460}
+  - {fileID: 422902813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2434,6 +2783,105 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1025008011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025008014}
+  - component: {fileID: 1025008013}
+  - component: {fileID: 1025008012}
+  m_Layer: 0
+  m_Name: ExploreArea (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025008012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025008011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac2a59e0af6a894ebd813c82f84c41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Explora la cueva norte
+  taskDescription: Entra en la cueva
+--- !u!60 &1025008013
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025008011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.42520905, y: 1.7047997}
+      - {x: -2.0169935, y: 0.4662855}
+      - {x: -1.4848037, y: -1.6361369}
+      - {x: -0.5793762, y: -0.77169037}
+      - {x: 0.65768206, y: -0.8148401}
+      - {x: 1.4668827, y: -1.6612511}
+      - {x: 2.06359, y: 0.36726373}
+  m_UseDelaunayMesh: 0
+--- !u!4 &1025008014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025008011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.48, y: 28.6, z: -0.059202522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084961756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2443,9 +2891,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 479848361}
     m_Modifications:
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: questName
+      value: Cuidados caninos
+      objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: textoDialogo
       value: 
       objectReference: {fileID: 763134374}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: usarOpciones
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: cuadroDialogo
       value: 
@@ -2456,25 +2912,49 @@ PrefabInstance:
       objectReference: {fileID: 82293679}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: frases.Array.size
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: opciones.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: frases.Array.data[0]
-      value: "Bienvenido a La Taberna del Drag\xF3n Rojo."
+      value: "Me llamo Isabel y fuera est\xE1 mi hijo de pelo rojo jugando con el
+        perro. \xBFPuedes cuidar del perro?"
       objectReference: {fileID: 0}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: frases.Array.data[1]
-      value: "Me llamo Isabel y fuera est\xE1 mi hijo de pelo rojo jugando con el
-        perro."
+      value: "Perfecto, est\xE1 fuera."
       objectReference: {fileID: 0}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: frases.Array.data[2]
-      value: Es un muchacho especial...
+      value: Que grosero...
       objectReference: {fileID: 0}
     - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: frases.Array.data[3]
-      value: "Bueno, \xBFqu\xE9 te sirvo?"
+      value: "\xBFPuedes cuidar al perro?"
       objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: opciones.Array.data[0]
+      value: "S\xED"
+      objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: opciones.Array.data[1]
+      value: No
+      objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: botonesOpciones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: botonesOpciones.Array.data[0]
+      value: 
+      objectReference: {fileID: 499865113}
+    - target: {fileID: 393829669434755366, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
+      propertyPath: botonesOpciones.Array.data[1]
+      value: 
+      objectReference: {fileID: 1218319061}
     - target: {fileID: 900822432014812013, guid: 13c821acc057cf241a8015af091bb7ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -11219,6 +11699,51 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1304739982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304739984}
+  - component: {fileID: 1304739983}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1304739983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304739982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e04ff132aa119b4988aee7cae25af94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+--- !u!4 &1304739984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304739982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.875007, y: -3.1349525, z: -0.14842822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383125322
 GameObject:
   m_ObjectHideFlags: 0
@@ -11272,7 +11797,7 @@ GameObject:
   - component: {fileID: 1415069266}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11456,6 +11981,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   interactuando: 0
+  questManagerUI: {fileID: 422902814}
 --- !u!1 &1645799347
 GameObject:
   m_ObjectHideFlags: 0
@@ -31168,6 +31694,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5565182210537256295, guid: 814eeccbea1eb5e40bfcfcf6b2479dc3, type: 3}
+      propertyPath: questName
+      value: Explora la cueva norte
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565182210537256295, guid: 814eeccbea1eb5e40bfcfcf6b2479dc3, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
@@ -31236,3 +31766,6 @@ SceneRoots:
   - {fileID: 947009563}
   - {fileID: 471416923}
   - {fileID: 1938118996}
+  - {fileID: 1304739984}
+  - {fileID: 248967615}
+  - {fileID: 1025008014}

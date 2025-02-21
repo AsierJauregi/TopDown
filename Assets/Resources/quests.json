@@ -13,11 +13,47 @@
       ]
     },
     {
-      "questName": "Explorar B",
-      "description": "Explora B cerca del pueblo.",
+      "questName": "Explora la cueva norte",
+      "description": "Explora la cueva norte, dicen que es azul.",
       "questTasks": [
         {
-          "description": "Ve a B"
+          "description": "Entra en la cueva"
+        }
+      ]
+    },
+    {
+      "questName": "Obtener las llaves",
+      "description": "Obtén las 4 llaves mágicas.",
+      "questTasks": [
+        {
+          "description": "Llave verde obtenida"
+        },
+        {
+          "description": "Llave amarilla obtenida"
+        },
+        {
+          "description": "Llave roja obtenida"
+        },
+        {
+          "description": "Llave azul obtenida"
+        }
+      ]
+    },
+    {
+      "questName": "Cuidados caninos",
+      "description": "Acaricia a al perro.",
+      "questTasks": [
+        {
+          "description": "Perro acariciado"
+        }
+      ]
+    },
+    {
+      "questName": "Visita el parque",
+      "description": "Ve al parque al noreste del pueblo.",
+      "questTasks": [
+        {
+          "description": "Visita realizada"
         }
       ]
     }

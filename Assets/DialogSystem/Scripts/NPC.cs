@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using QuestSystem;
 using TMPro;
 using UnityEngine;
 
-public class NPC : MonoBehaviour, Interactuable
+public class NPC : MonoBehaviour, Interactuable, IQuestTaskCompleter
 {
     [Header("Dialogo")]
-    [SerializeField, TextArea(1,5)] private string[] frases; //num min de lineas y num máximo el text area (1,5)
+    [SerializeField, TextArea(1,5)] private string[] frases; //num min de lineas y num mï¿½ximo el text area (1,5)
     [SerializeField] private float tiempoEntreLetras;
     [SerializeField] private GameObject cuadroDialogo;
     [SerializeField] private TextMeshProUGUI textoDialogo;
@@ -26,7 +28,20 @@ public class NPC : MonoBehaviour, Interactuable
     private bool hablandoNPC = false;
     private int indiceActual = -1;
 
-
+    [Header("Quests")]
+    [SerializeField]
+    private int optionToGiveQuest;
+    [SerializeField]
+    private string questName = string.Empty;
+    
+    [Header("Quest Tasks")]
+    [SerializeField]
+    private int optionToCompleteQuestTask;
+    [SerializeField]
+    private string questTaskName = string.Empty;
+    [SerializeField]
+    private string taskDescription = string.Empty;
+    
     private void Start()
     {
         Patrulla_NPC patrullaNPC;
@@ -151,11 +166,28 @@ public class NPC : MonoBehaviour, Interactuable
         cuadroOpciones.SetActive(false);
         indiceActual = index + 1;
         CompletarFrase();
+        
+        if (index == optionToGiveQuest)
+        {
+            StartQuestOnPlayer();
+        }
+        
+        if (index == optionToCompleteQuestTask)
+        {
+            CompleteTask();
+        }
+    }
+
+    private void StartQuestOnPlayer()
+    {
+        QuestManager.Instance.StartQuest(questName);
     }
 
 
-
-
+    public void CompleteTask()
+    {
+        QuestManager.Instance.CompleteTask(questName, taskDescription);
+    }
 }
 
 

@@ -1,7 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using QuestSystem.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class Player : MonoBehaviour
 
     public bool interactuando;
     public Vector3 PuntoDestino { get => puntoDestino; set => puntoDestino = value; }
+
+    [SerializeField]
+    private QuestManagerUI questManagerUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +68,15 @@ public class Player : MonoBehaviour
         if (inputV == 0) inputH = Input.GetAxisRaw("Horizontal");
         if (inputH == 0) inputV = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.E)) LanzarInteraccion();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ToggleQuestManagerUI();
+        }
+    }
 
+    private void ToggleQuestManagerUI()
+    {
+        questManagerUI.Toggle();
     }
 
     private void LanzarInteraccion()
@@ -88,7 +101,7 @@ public class Player : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, puntoDestino, velocidadMovimiento * Time.deltaTime);
             yield return null;
         }
-        //Refrescar punto de interacción al terminar de movernos
+        //Refrescar punto de interacciï¿½n al terminar de movernos
         puntoInteraccion = transform.position + ultimoInput;
         moviendo = false;
     }

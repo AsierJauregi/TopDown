@@ -12,8 +12,9 @@ namespace QuestSystem
         {
             public List<Quest> quests;
         }
-        
+
         public static QuestManager Instance;
+
         public List<Quest> quests = new();
 
         private readonly List<IQuestListener> _listeners = new();
@@ -23,6 +24,7 @@ namespace QuestSystem
             if (Instance == null)
             {
                 Instance = this;
+                DontDestroyOnLoad(gameObject);
             }
             else
             {

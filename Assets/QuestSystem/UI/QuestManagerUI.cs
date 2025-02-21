@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace QuestSystem.UI
         public QuestUI questPrefab;
 
         private readonly Dictionary<string, QuestUI> _questUIElements = new();
-        
+
         public QuestTaskUI questTaskPrefab;
 
         private readonly Dictionary<string, Dictionary<string, QuestTaskUI>> _questTaskUIElements = new();
@@ -20,11 +21,33 @@ namespace QuestSystem.UI
         {
             QuestManager.Instance?.RegisterListener(this);
             questsUIPanel.SetActive(false);
+
+            // Esto es necesario para er cambio de escena, se pierde la información.
+            GetQuests();
         }
 
         private void OnDisable()
         {
             QuestManager.Instance?.UnregisterListener(this);
+        }
+
+        // TODO: TEMPORARY SOLUTION
+        private void GetQuests()
+        {
+            foreach (var quest in QuestManager.Instance.quests)
+            {
+                if (quest.state == QuestState.Inactive)
+                {
+                    continue;
+                }
+
+                AddQuestUI(quest);
+            }
+        }
+
+        public void Toggle()
+        {
+            questsUIPanel.SetActive(!questsUIPanel.activeSelf);
         }
 
         public void OnQuestStarted(Quest quest)
@@ -36,6 +59,11 @@ namespace QuestSystem.UI
                 return;
             }
 
+            AddQuestUI(quest);
+        }
+
+        private void AddQuestUI(Quest quest)
+        {
             var questUI = Instantiate(questPrefab, questsContainer);
             questUI.UpdateData(quest);
             _questUIElements[quest.questName] = questUI;
@@ -64,6 +92,7 @@ namespace QuestSystem.UI
 
         public void OnQuestCompleted(Quest quest)
         {
+            
             if (_questUIElements.TryGetValue(quest.questName, out var element))
             {
                 element.UpdateData(quest);
