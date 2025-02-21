@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3107052006757259160}
   - component: {fileID: 7736920113331793694}
   - component: {fileID: 4200469603013509791}
+  - component: {fileID: 8858896224051070193}
   m_Layer: 3
   m_Name: Kid
   m_TagString: NPC
@@ -52,9 +53,10 @@ MonoBehaviour:
   - Buenas caballero, necesito su ayuda, me escucha?
   - Gracias, se que alguen me escucha
   - Vaya, que pena que no me escuche pero me haya contestado...
-  tiempoEntreLetras: 0.03
+  tiempoEntreLetras: 0.075
   cuadroDialogo: {fileID: 0}
   textoDialogo: {fileID: 0}
+  pitchVariation: 0.5
   usarOpciones: 1
   cuadroOpciones: {fileID: 0}
   botonesOpciones:
@@ -64,6 +66,11 @@ MonoBehaviour:
   - puede
   - 'no c:'
   gameManager: {fileID: 11400000, guid: 67691a92553dc4d4693ce3b545ef6b16, type: 2}
+  optionToGiveQuest: 0
+  questName: 
+  optionToCompleteQuestTask: 0
+  questTaskName: 
+  taskDescription: 
 --- !u!212 &8286667724474555440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,3 +209,99 @@ MonoBehaviour:
   queEsObstaculo:
     serializedVersion: 2
     m_Bits: 0
+--- !u!82 &8858896224051070193
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810685320447428325}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5a9dba89355488f4d8c3aa3ebf4aa045, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

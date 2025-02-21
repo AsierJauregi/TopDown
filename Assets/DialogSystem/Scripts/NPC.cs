@@ -5,6 +5,7 @@ using QuestSystem;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class NPC : MonoBehaviour, Interactuable, IQuestTaskCompleter
 {
     [Header("Dialogo")]
@@ -12,7 +13,9 @@ public class NPC : MonoBehaviour, Interactuable, IQuestTaskCompleter
     [SerializeField] private float tiempoEntreLetras;
     [SerializeField] private GameObject cuadroDialogo;
     [SerializeField] private TextMeshProUGUI textoDialogo;
-
+    
+    private AudioSource _audioSource;
+    [SerializeField] private float pitchVariation = 0.5f;
 
     [Header("Opciones")]
     [SerializeField] private bool usarOpciones;
@@ -41,7 +44,12 @@ public class NPC : MonoBehaviour, Interactuable, IQuestTaskCompleter
     private string questTaskName = string.Empty;
     [SerializeField]
     private string taskDescription = string.Empty;
-    
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         Patrulla_NPC patrullaNPC;
@@ -84,6 +92,9 @@ public class NPC : MonoBehaviour, Interactuable, IQuestTaskCompleter
         foreach (char caracter in caracteresFrase)
         {
             textoDialogo.text += caracter;
+            _audioSource.volume = 0.05f;
+            _audioSource.pitch = UnityEngine.Random.Range(1f, 2f);
+            _audioSource.Play();
             yield return new WaitForSeconds(tiempoEntreLetras);
         }
         hablandoNPC=false;
